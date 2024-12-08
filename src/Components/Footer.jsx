@@ -138,7 +138,7 @@ const IntegratedLocation = () => (
 
 function FooterEnd() {
   return (
-    <p className="w-full text-center text-xs sm:text-sm lg:text-lg">
+    <p className="w-full text-center text-xs sm:text-sm lg:text-base">
       <i className="ri-copyright-line"></i> {new Date().getFullYear()} Goro
       Rental. All rights reserved <br /> Designed & Developed by{" "}
       <span className="decoration underline underline-offset-2 text-xs sm:text-base lg:text-lg">
