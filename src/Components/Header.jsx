@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Squash } from "hamburger-react";
+import BrandIcon from "../assets/BrandIcon.png"
 
 function Header() {
   const [activeSection, setActiveSection] = useState("home");
@@ -41,7 +42,7 @@ function Header() {
         id="centeredHeader"
         className="w-[95%] h-full flex items-center justify-between"
       >
-        <h1 className="text-2xl w-[50%] font-semibold">GORO</h1>
+       <img src={BrandIcon} alt="goro_" className="w-14 h-14" />
 
         {/* Hamburger Icon */}
         <div className="flex lg:hidden items-center justify-end">

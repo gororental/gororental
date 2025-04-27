@@ -1,5 +1,5 @@
 import React from "react";
-import footerData from "../Utilities/footer";
+import footerData from "../Utilities/footer"; 
 
 function Footer() {
   return (
@@ -67,7 +67,7 @@ function FooterSection({ section }) {
       {section.email && (
         <a
           href={section.email.href}
-          className="opacity-60 decoration-white underline underline-offset-4"
+          className="opacity-60 2xl:text-md decoration-white"
         >
           {section.email.text}
         </a>
@@ -82,7 +82,7 @@ function FooterLinks({ links }) {
       {links.map((link, index) => (
         <li
           key={index}
-          className="text-xs sm:text-sm lg:text-base 2xl:text-lg  opacity-60 cursor-pointer decoration-white underline underline-offset-4"
+          className="text-xs sm:text-sm lg:text-base 2xl:text-md  opacity-60 cursor-pointer decoration-white"
           onClick={(e) => {
             e.preventDefault();
             const targetLink = document.getElementById(link.toLowerCase());
@@ -92,6 +92,7 @@ function FooterLinks({ links }) {
                 block: "start",
               });
             }
+            
           }}
         >
           {link}
@@ -111,7 +112,7 @@ function FooterConnections({ connections }) {
             href={value.href || "#"}
             target="_blank"
             rel="noopener noreferrer"
-            className="opacity-60 text-base 2xl:text-lg decoration-white underline underline-offset-4"
+            className="opacity-60 text-base 2xl:text-md decoration-white"
           >
             {value.text} <br />
           </a>
@@ -139,13 +140,13 @@ const IntegratedLocation = () => (
 function FooterEnd() {
   return (
     <p className="w-full text-center text-xs sm:text-sm">
-      <i className="ri-copyright-line"></i> {new Date().getFullYear()} Goro
+      <i className="ri-copyright-line"></i>{new Date().getFullYear()} Goro
       Rental. All rights reserved <br /> Designed & Developed by{" "}
-      <span className="decoration underline underline-offset-2 text-xs sm:text-base">
+      <span className="decoration text-xs sm:text-base">
         Sushant Dwivedi
       </span>{" "}
       <a
-        href="https://www.instagram.com/sushantt.23"
+        href="https://www.instagram.com/sushantt.230"
         target="_blank"
         rel="noopener noreferrer"
       >

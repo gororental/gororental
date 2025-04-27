@@ -1,5 +1,6 @@
 import React from "react";
 import carList from "../Utilities/List";
+import { gPillColor } from "../Constants/Objects";
 
 function List() {
   return (
@@ -56,9 +57,12 @@ const CarCard = ({ car }) => {
               {car.category}
             </p>
           </div>
-          <p className="bg-lime-400/50 py-0 px-5 text-sm font-medium flex items-center justify-center rounded-xl">
+          
+          { gPillColor.map(([pricingTier, pillColor]) => (
+             pricingTier === car.pricingTier && (
+            <p className={`${pillColor} py-0 px-5 text-sm font-medium flex items-center justify-center rounded-xl`}>
             {car.pricingTier}
-          </p>
+          </p>)))}
         </div>
         <div className="h-[15%] w-full  border-black/20 border-t border-b flex items-center justify-around">
           {specs.map((spec, i) => (

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import faqs from "../Utilities/Faqs";
 import FaqIcon from "../assets/FaqIcon.png";
+import { gWABaseUrl, gWAmessage, gWANumber } from "../Constants/Strings";
 
 // Main Component
 function Faqs() {
@@ -32,8 +33,9 @@ function FaqHeader() {
       <p className="text-xs sm:text-base lg:text-lg xl:text-xl 3xl:text-2xl">
         Quick answers to questions you may have. Can't find what you're looking
         for?{" "}
-        <span className="decoration-black underline-offset-4 underline">
-          <a href="tel:+918827740011">Drop a message.</a>
+        <span className="decoration-black hover:opacity-50">
+          <a href={`${gWABaseUrl}${gWANumber}?text=${encodeURIComponent(gWAmessage)}`} target="_blank"
+            rel="noopener noreferrer">Drop a message.</a>
         </span>
       </p>
     </div>
